@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fedezd fel a Zemplént! Két túraútvonal, Google Térkép és friss időjárás-előrejelzés egy helyen.">
+  <title>Ösvény — A következő kalandod itt kezdődik</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232e4a36'/%3E%3Cpath d='M7 30 19 9l14 21H7m7-9h12' stroke='%23f6cc61' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#turak">Ugrás a túrákhoz</a>
+  <header class="header">
+    <a class="brand" href="#fooldal" aria-label="Ösvény főoldal"><span class="brand-icon">↟</span> ösvény<span class="brand-dot">.</span></a>
+    <nav aria-label="Fő navigáció">
+      <a href="#fooldal">Főoldal</a>
+      <a href="#turak">Túraútvonalak</a>
+      <a href="#terkep">Térkép</a>
+      <a href="#idojaras">Időjárás</a>
+    </nav>
+    <button class="mode" id="mode" aria-pressed="false"><span aria-hidden="true">◐</span> <span>Fekete-fehér</span></button>
+  </header>
+  <main>
+    <section class="hero" id="fooldal" aria-roledescription="diavetítés" aria-label="Zempléni tájak">
+      <img id="hero-image" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Megyerhegyi_tengerszem_uj.jpg" alt="A Megyer-hegyi tengerszem sziklafalai és zöld vize" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> KI A SZABADBA, BE A TERMÉSZETBE</p>
+        <h1>Kevesebb zaj.<br>Több <em>ösvény.</em></h1>
+        <p class="hero-description">Sziklák közé bújt tavak, erdei utak és várak a felhők alatt. Találd meg a következő kalandod a Zemplénben.</p>
+        <a class="button yellow" href="#turak">Felfedezem a túrákat</a>
+      </div>
+      <div class="hero-bottom">
+        <div><span class="location-tag">ZEMPLÉNI-HEGYSÉG</span><p id="slide-title">01 / Megyer-hegyi tengerszem</p></div>
+        <div class="slide-controls">
+          <button id="previous" aria-label="Előző kép">‹</button>
+          <button id="pause" aria-label="Diavetítés szüneteltetése">Ⅱ</button>
+          <button id="next" aria-label="Következő kép">›</button>
+          <span id="slide-count">01 <span>/ 02</span></span>
+        </div>
+      </div>
+    </section>
+    <div class="ribbon"><span>↟ &nbsp; Zemplén, Magyarország</span><span>2 felfedezésre váró útvonal</span><span>A jó napok kint kezdődnek. ✳</span></div>
+    <section class="section" id="turak">
+      <div class="section-heading"><div><p class="eyebrow green">VÁLASSZ EGY IRÁNYT</p><h2>Két út. Rengeteg élmény.</h2></div><p>Egy tó a sziklák között vagy egy vár a hegytetőn?<br>Ma te döntöd el, merre indulsz.</p></div>
+      <div class="route-grid">
+        <article class="route-card">
+          <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Megyerhegyi_tengerszem_uj.jpg" alt="A Megyer-hegyi tengerszem" loading="lazy"><span class="badge pink">VÍZPART ÉS SZIKLÁK</span><span class="route-number">01</span></div>
+          <div class="card-content"><p class="eyebrow green">SÁROSPATAK KÖRNYÉKE</p><h3>Megyer-hegyi tengerszem</h3><p>Egy hajdani malomkőbánya rejtett tava, magas sziklafalakkal és különleges kilátással.</p>
+          <div class="stats"><span>↔ <b>10–12 km</b><small>oda-vissza</small></span><span>◷ <b>4–5 óra</b><small>becsült idő</small></span><span>↟ <b>Közepes</b><small>ajánlott erőnlét</small></span></div>
+          <div class="itinerary"><span class="trail-dot"></span><p>Sárospatak <span>·</span> Malomkő tanösvény <span>·</span> Tengerszem <span>·</span> vissza ugyanazon az úton</p></div>
+          <div class="card-actions"><button class="button green-button select-route" data-route="0">Megnézem a térképen</button><a href="https://sarospatak.hu/kalandok-termeszet/megyer-hegyi-tengerszem/" target="_blank" rel="noopener">Túraleírás</a></div></div>
+        </article>
+        <article class="route-card">
+          <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/F%C3%BCz%C3%A9ri_v%C3%A1r_2020_02.jpg" alt="Füzér vára a zempléni hegyek között" loading="lazy"><span class="badge yellow">VÁR ÉS PANORÁMA</span><span class="route-number">02</span></div>
+          <div class="card-content"><p class="eyebrow green">FÜZÉR</p><h3>Füzér vára gyalog</h3><p>Rövid, meredek kapaszkodó egy vulkáni hegyre. A jutalom: fehér várfalak és a Zemplén panorámája.</p>
+          <div class="stats"><span>↔ <b>Rövid túra</b><small>oda-vissza</small></span><span>◷ <b>2–3 óra</b><small>várlátogatással</small></span><span>↟ <b>Meredek</b><small>lépcsős szakasz</small></span></div>
+          <div class="itinerary"><span class="trail-dot"></span><p>Füzéri várparkoló <span>·</span> Alsó vár <span>·</span> Felső vár <span>·</span> vissza a parkolóhoz</p></div>
+          <div class="card-actions"><button class="button green-button select-route" data-route="1">Megnézem a térképen</button><a href="https://fuzervara.hu/" target="_blank" rel="noopener">Várinformáció</a></div></div>
+        </article>
+      </div>
+      <p class="footnote">A menetidők tájékoztató jellegűek, pihenőkkel változhatnak. A vár belépődíjas; indulás előtt ellenőrizd a nyitvatartást. Az erdei szakaszokon kövesd a helyi turistajelzéseket.</p>
+    </section>
+    <section class="map-section section" id="terkep">
+      <div class="map-info"><p class="eyebrow green">TUDD, MERRE INDULSZ</p><h2>A kaland<br>a térképen kezdődik.</h2><p>Válassz túrát, nézd meg az úti célt, és tervezd meg az indulást.</p>
+      <div class="route-picker" aria-label="Térképen megjelenő túra"><button data-route="0" class="map-choice active" aria-pressed="true"><span>01</span> Megyer-hegyi tengerszem</button><button data-route="1" class="map-choice" aria-pressed="false"><span>02</span> Füzér vára</button></div>
+      <p id="map-route" class="map-route">Sárospatak → Malomkő tanösvény → Tengerszem → Sárospatak</p>
+      <a id="directions" class="text-link" href="https://www.google.com/maps/dir/?api=1&origin=S%C3%A1rospatak&destination=Megyer-hegyi+tengerszem&travelmode=walking" target="_blank" rel="noopener">Gyalogos útvonal megnyitása a Google Mapsben</a>
+      <p class="footnote">A beágyazott térkép az úti célt mutatja. A Google útvonaljavaslata eltérhet a jelzett túraúttól.</p></div>
+      <iframe id="map" title="Google Térkép – Megyer-hegyi tengerszem" src="https://maps.google.com/maps?q=Megyer-hegyi%20tengerszem&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </section>
+    <section class="weather-section section" id="idojaras">
+      <div class="section-heading"><div><p class="eyebrow">INDULÁS ELŐTT</p><h2>Mit tartogat az ég?</h2></div><label class="weather-label">Előrejelzés helye<select id="weather-location"><option value="0">Megyer-hegyi tengerszem</option><option value="1">Füzér</option></select></label></div>
+      <div id="weather" class="weather-grid" aria-live="polite"><p>Az előrejelzés betöltése…</p></div>
+      <div class="weather-footer"><p id="weather-status">5 napos előrejelzés · helyi idő szerint</p><button id="refresh">Frissítés</button><a href="https://open-meteo.com/" target="_blank" rel="noopener">Időjárás: Open-Meteo</a></div>
+    </section>
+    <div class="closing"><span>✳</span><p>Hagyj magad után csak lábnyomot.<br><strong>Vigyél haza egy jó történetet.</strong></p><span>↟</span></div>
+  </main>
+  <footer><a class="brand" href="#fooldal">ösvény.</a><p>Készült a természet felfedezéséhez.</p><details><summary>Képek és források</summary><p>Tengerszem: <a href="https://commons.wikimedia.org/wiki/File:Megyerhegyi_tengerszem_uj.jpg">Trifonov</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.<br>Füzér: <a href="https://commons.wikimedia.org/wiki/File:F%C3%BCz%C3%A9ri_v%C3%A1r_2020_02.jpg">Pasztilla / Attila Terbócs</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. A képek a megjelenítéshez vágva.<br>Útvonalak: <a href="https://sarospatak.hu/kalandok-termeszet/megyer-hegyi-tengerszem/">Sárospatak Turizmus</a>, <a href="https://tekeregj.hu/utvonal/fuzer-vara/">Tekeregj</a>, <a href="https://veze.hu/fuzer-vara/">Veze Birtok</a>.</p></details></footer>
+</body>
+</html>
